@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:textSize="8sp"
+                android:textSize="10sp"
                 android:text="By checking the box you agree to our"
                 android:id="@+id/checkbox"/>
 
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:textSize="8sp"
+                android:textSize="10sp"
                 android:textColor="@color/blue"
                 android:text=" terms"
                 android:id="@+id/btn_to_terms"/>
@@ -91,13 +91,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:textSize="8sp"
+                android:textSize="10sp"
                 android:text=" and"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:textSize="8sp"
+                android:textSize="10sp"
                 android:textColor="@color/blue"
                 android:text=" condition"
                 android:id="@+id/btn_to_condition"/>

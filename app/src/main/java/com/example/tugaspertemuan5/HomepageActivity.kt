@@ -1,7 +1,9 @@
 package com.example.tugaspertemuan5
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.tugaspertemuan5.RegisterActivity.Companion.EXTRA_USERNAME
 import com.example.tugaspertemuan5.databinding.ActivityHomepageBinding
@@ -42,8 +44,16 @@ class HomepageActivity : AppCompatActivity() {
             binding.txtEmail.text = "$email"
             binding.txtPhone.text = "$phone"
 
-            btnLogout.setOnClickListener{
-                finish()
+            val btnLogout = findViewById<Button>(R.id.btn_logout)
+            btnLogout.setOnClickListener {
+                // Membuat Intent untuk kembali ke halaman login (LoginpageActivity)
+                val intentToRegisterActivity = Intent(this@HomepageActivity, RegisterActivity::class.java)
+
+                // Menambahkan flag untuk menghapus semua activity sebelumnya (agar tidak dapat kembali)
+                intentToRegisterActivity.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                // Memulai aktivitas (kembali ke halaman login)
+                startActivity(intentToRegisterActivity)
             }
 
         }

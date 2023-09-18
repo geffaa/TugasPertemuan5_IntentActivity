@@ -3,6 +3,8 @@ package com.example.tugaspertemuan5
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import com.example.tugaspertemuan5.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -38,7 +40,16 @@ class RegisterActivity : AppCompatActivity() {
                 intentToHome.putExtra(EXTRA_PASSWORD, password)
 
                 startActivity(intentToHome)
+
             }
         }
+
+            val btnToLogin = findViewById<TextView>(R.id.btn_to_login)
+
+                btnToLogin.setOnClickListener {
+                val intentToLogin = Intent(this@RegisterActivity, LoginpageActivity::class.java)
+                startActivity(intentToLogin)
+        }
+
     }
 }
